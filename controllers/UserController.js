@@ -12,6 +12,7 @@ const jwt = require('jsonwebtoken');
 const user = require('../models/user.js');
 const UserController = {
     getAll(req,res){
+        console.log("entra aqui");
         User.findAll({
             include: [{
                 model: Appointment
@@ -20,6 +21,7 @@ const UserController = {
     },
     async signup(req,res){
         try {
+            console.log("ALGOPORPONER")
             req.body.password = await bcrypt.hash(req.body.password, 9);
             const user = await User.create(req.body);
             res.status(201).send(user)
