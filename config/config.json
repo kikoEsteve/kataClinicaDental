@@ -4,7 +4,9 @@
     "password": null,
     "database": "kataclinicadental",
     "host": "127.0.0.1",
-    "dialect": "mysql"
+    "dialect": "mysql",
+    "_comment": "To avoid deprecated warnings",
+    "operatorsAliases": false
   },
   "test": {
     "username": "root",
