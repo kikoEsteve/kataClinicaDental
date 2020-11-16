@@ -9,26 +9,26 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       name: {
-        type: Sequelize.STRING,
-        allowNull: false
+        allowNull: false,
+        type: Sequelize.STRING
       },
       surname: {
         type: Sequelize.STRING
       },
       email: {
-        type: Sequelize.STRING,
         allowNull: false,
-        unique: true
+        unique: true,
+        type: Sequelize.STRING
       },
       password: {
-        type: Sequelize.INTEGER,
-        allowNull: false
+        allowNull: false,
+        type: Sequelize.STRING
       },
       phone: {
         type: Sequelize.INTEGER
       },
       role: {
-        type: Sequelize.ENUM('adm','dtr','usr')
+        type: Sequelize.ENUM('admin','doctor','user')
       },
       createdAt: {
         allowNull: false,
