@@ -5,7 +5,7 @@ const {
 module.exports = (sequelize, DataTypes) => {
   class User extends Model {
     static associate(models) {
-        this.hasOne(models.Appointment)
+        this.hasMany(models.Appointment)
     }
   };
   User.init({
@@ -23,11 +23,11 @@ module.exports = (sequelize, DataTypes) => {
       unique: true      
     },
     password: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.STRING,
       allowNull: false
     },
     phone: DataTypes.INTEGER,
-    role: DataTypes.ENUM('adm','dtr','usr'),
+    role: DataTypes.ENUM('admin','doctor','user'),
   }, {
     sequelize,
     modelName: 'User',
