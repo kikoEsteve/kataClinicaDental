@@ -16,7 +16,7 @@ module.exports = {
         type: Sequelize.INTEGER,
         allowNull: null
       },
-      doctrorId: {
+      doctorId: {
         type: Sequelize.INTEGER,
         allowNull: null
       },
