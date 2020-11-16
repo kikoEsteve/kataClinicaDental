@@ -33,6 +33,26 @@ const AppointmentController = {
             console.error(error);
             res.status(500).send({ message: 'There was a problem creating the appointment'})
         })
+    },
+    update(req,res) {
+        req.body.appointmentId = req.appointment.id;
+        Appointment.update(req.body)
+        .then(appointment => res.status(201).send(appointment))
+        .catch(error => {
+            console.error(error);
+            res.status(500).send({ message: 'There was a problem updating the appointment'})
+        })
+    },
+    delete(req,res) {
+        req.body.appointmentId = req.appointment.id;
+        Appointment.destroy({
+            where: { id: appointmentId }
+        })
+        .then(appointment => res.status(201).send(appointment))
+        .catch(error => {
+            console.error(error);
+            res.status(500).send({ message: 'There was a problem trying to delete the appointment'})
+        })
     }
 }
 
