@@ -1,16 +1,8 @@
 const express = require('express');
-const mysql = require('mysql2/promise');
 const appointmentsRouter = require('./routes/appointments');
 const usersRouter = require('./routes/users');
 const app = express();
-const port = 3000;
-
-const connection = mysql.createConnection({
-    host: 'us-cdbr-east-02.cleardb.com',
-    user: 'b14055a4b053df',
-    database: 'heroku_e6202b7bdca0961',
-    password: '4efa34c0'
-})
+const port = proces.env.PORT || 3000;
 
 //Evitamos undefined en el req.body
 app.use(express.json());
