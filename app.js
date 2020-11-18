@@ -2,7 +2,7 @@ const express = require('express');
 const appointmentsRouter = require('./routes/appointments');
 const usersRouter = require('./routes/users');
 const app = express();
-const port = proces.env.PORT || 3000;
+const port = process.env.PORT || 3000;
 
 //Evitamos undefined en el req.body
 app.use(express.json());
