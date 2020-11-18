@@ -7,9 +7,9 @@ const port = 3000;
 
 const connection = mysql.createConnection({
     host: 'localhost',
-    user: 'root',
-    database: 'kataclinicadental',
-    password: ''
+    user: 'b14055a4b053df',
+    database: 'heroku_e6202b7bdca0961',
+    password: '4efa34c0'
 })
 
 //Evitamos undefined en el req.body
