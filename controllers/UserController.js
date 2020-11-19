@@ -12,16 +12,23 @@ const jwt = require('jsonwebtoken');
 const user = require('../models/user.js');
 const UserController = {
     getAll(req,res){
-        console.log("entra aqui");
+        // console.log("entra aqui");
         User.findAll({
             include: [{
                 model: Appointment
             }]
-        }).then(users=> res.send(users))
+        })
+        .then(users=> res.send(users))
+        .catch(error => {
+            console.error(error);
+            res.status(500).send({
+                message: "There was a problem. No users found"
+            })
+        })
     },
     async signup(req,res){
         try {
-            console.log("ALGOPORPONER")
+            // console.log("ALGOPORPONER")
             req.body.password = await bcrypt.hash(req.body.password, 9);
             const user = await User.create(req.body);
             res.status(201).send(user)
