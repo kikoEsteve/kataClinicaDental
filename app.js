@@ -17,7 +17,7 @@ app.use(function(req,res,next) {
 });
 
 //Customer endpoint routing
-app.use('./users', usersRouter);
+app.use('/users', usersRouter);
 
 //Appointment endpoint routing
 app.use('./appointments', appointmentsRouter)

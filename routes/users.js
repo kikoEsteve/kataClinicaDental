@@ -3,7 +3,7 @@ const UserController = require('../controllers/UserController');
 
 //Route to show all users
 router.get('./', UserController.getAll);
-router.post('./signup', UserController.signup);
+router.post('/signup', UserController.signup);
 
 router.post('./login', UserController.login);
 
