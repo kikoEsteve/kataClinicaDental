@@ -20,7 +20,7 @@ app.use(function(req,res,next) {
 app.use('/users', usersRouter);
 
 //Appointment endpoint routing
-app.use('./appointments', appointmentsRouter)
+app.use('/appointments', appointmentsRouter)
 
 
 app.listen(port, () => console.log(`Server working at port ${port}`));
