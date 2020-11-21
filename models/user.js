@@ -27,7 +27,11 @@ module.exports = (sequelize, DataTypes) => {
       allowNull: false
     },
     phone: DataTypes.INTEGER,
-    role: DataTypes.ENUM('admin','doctor','user'),
+    role: {
+      DataTypes.ENUM,
+      value: ['admin','doctor','user'],
+      defaultValue: 'user'
+    }
   }, {
     sequelize,
     modelName: 'User',
