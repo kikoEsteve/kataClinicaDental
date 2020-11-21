@@ -29,7 +29,7 @@ module.exports = (sequelize, DataTypes) => {
     phone: DataTypes.INTEGER,
     role: {
       type: DataTypes.ENUM,
-      value: ['admin','doctor','user'],
+      values : ['admin','doctor','user'],
       defaultValue: 'user'
     }
   }, {
