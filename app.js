@@ -23,5 +23,6 @@ app.use('/users', usersRouter);
 app.use('/appointments', appointmentsRouter)
 
 
-app.listen(port, () => console.log(`Server working at port ${port}`));
+app.listen(process.env.PORT || 3000)
+// app.listen(port, () => console.log(`Server working at port ${port}`));
 // app.listen(PORT, () => console.log('Server running at port ' + PORT));
