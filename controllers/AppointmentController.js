@@ -12,7 +12,7 @@ const AppointmentController = {
         Appointment.findAll({
             include: [User,{
                 model: User,
-                as: 'dtr'
+                as: 'doctor'
             }],
             where: {
                 date: {
